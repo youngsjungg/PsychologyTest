@@ -11,9 +11,7 @@ import com.example.psychologytest.R
 import kotlinx.android.synthetic.main.fragment_main.*
 
 // TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+// the fragment initialization parameters, e.g. ARG_ITEM_NUM
 
 /**
  * A simple [Fragment] subclass.
@@ -26,7 +24,7 @@ class MainFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main, container, false)
     }
@@ -37,9 +35,10 @@ class MainFragment : Fragment() {
         navController = Navigation.findNavController(view)
 
         //next버튼을 누르면 다음 페이지로 넘어가는 동작
-        btn_next.setOnClickListener {
+        btn_next.setOnClickListener{
             navController.navigate(R.id.action_mainFragment_to_questionFragment)
         }
 
     }
-}
+
+    }
